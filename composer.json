@@ -1,0 +1,38 @@
+{
+  	"name": "bike-coop/bike-coop-plugin",
+  	"description": "Custom WordPress plugin",
+  	"keywords": ["wordpress", "plugin", "bike-coop"],
+  	"homepage": "https://www.home.com",  
+	"repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org"
+        }
+   	],
+  	"type": "wordpress-plugin",
+  	"minimum-stability": "RC",
+	"require": {
+	  	"composer/installers": 					">=v1.0.6",
+        "mobiledetect/mobiledetectlib": 		"^2.8",
+		"gambitph/titan-framework":				"*",
+		"wpackagist-plugin/cmb2":				"*",
+		"jjgrainger/wp-custom-post-type-class": "dev-master"
+  	},
+	"config": {
+	 	"vendor-dir":  "framework/vendor"
+	},
+	"extra": {
+		"installer-paths": {
+			"framework/vendor/{$name}/": ["type:wordpress-plugin", "type:wordpress-theme"]
+		}
+	},
+	"autoload": {
+        "psr-0": {
+            "Acme": "src/"
+        },
+		"files": [
+			"framework/vendor/gambitph/titan-framework/titan-framework-embedder.php",
+			"framework/vendor/cmb2/init.php"
+		]
+    }
+}
