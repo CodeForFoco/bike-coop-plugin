@@ -13,9 +13,6 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 if(!defined('BIKE_COOP_PLUGIN_DIR')) define('BIKE_COOP_PLUGIN_DIR',  plugin_dir_path( __FILE__ ));
 if(!defined('BIKE_COOP_PLUGIN_URI')) define('BIKE_COOP_PLUGIN_URI',  plugin_dir_url( __FILE__ ));
-//if(!defined('AWESOME_WOO_SHOP_MODULES_URL'))	define('AWESOME_WOO_SHOP_MODULES_URL',AWESOME_WOO_SHOP_URI.'framework/modules');
-//if(!defined('AWESOME_WOO_SHOP_MODULES_BASE'))	define('AWESOME_WOO_SHOP_MODULES_BASE', AWESOME_WOO_SHOP_DIR.'framework/modules');
-
 
 class BikeCoopPlugin{
 	/**
@@ -44,11 +41,12 @@ class BikeCoopPlugin{
 		return self::$instance;
 	 }
 	 
-	 function __construct(){
+	 protected function __construct(){
 		require_once(BIKE_COOP_PLUGIN_DIR."framework/vendor/autoload.php");
 		
 		$this->load_classes();
 		$this->init();	
+		$this->load_modules();
 	 }
 	
 	 public function fcbc_volunteer_form() {
@@ -95,6 +93,20 @@ class BikeCoopPlugin{
 				});
 			}
 		endforeach;
+    }
+    
+    private function load_modules(){
+    	$module_dirs = $dirs = array_filter(glob(BIKE_COOP_PLUGIN_DIR.'framework/modules/*'), 'is_dir');
+    	
+    	if(!is_array($module_dirs) && !empty($module_dirs))
+    		return;
+    	
+    	foreach($module_dirs as $dir){
+    		$dir = explode('/', trim($dir, '/') );
+    		$dir = $dir[count($dir) -1];
+    		
+    		include_once(BIKE_COOP_PLUGIN_DIR."framework/modules/$dir/$dir.php");
+    	}
     }
 	
 	protected function init(){
