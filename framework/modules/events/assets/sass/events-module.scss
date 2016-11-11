@@ -1,0 +1,35 @@
+@import 'variables';
+@import '../../../../../node_modules/bootstrap/scss/variables';
+@import '../../../../../node_modules/bootstrap/scss/mixins';
+
+.awesome-events-wrapper{
+    @import "../../../../../node_modules/bootstrap/scss/mixins/grid-framework";
+    @import "../../../../../node_modules/bootstrap/scss/mixins/grid";
+    @import "../../../../../node_modules/bootstrap/scss/mixins/breakpoints";
+    //@import "../../../../../node_modules/bootstrap/scss/grid";
+    @import '../../../../../node_modules/bootstrap/scss/card';
+    
+    .awesome-events{
+        @include media-breakpoint-down(sm){
+            text-align: center;
+        }
+        
+        @include make-row(); margin-left: -6px !important; margin-right: -6px !important; 
+        
+        .event-wrapper{
+            @include media-breakpoint-down(sm){
+                margin-left: auto; margin-right: auto;
+            }
+            padding: 0 6px; text-align: left; 
+            
+            @include media-breakpoint-up(sm){
+                @include make-col(6);
+            }
+            
+            @include media-breakpoint-up(lg){
+                @include make-col(4);     
+            }
+            
+        }
+    }
+}

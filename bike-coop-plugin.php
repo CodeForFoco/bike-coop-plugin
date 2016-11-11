@@ -2,7 +2,7 @@
 /*
 Plugin Name: Bike-Coop Site Plugin
 Description: A plugin for all the Bike Co-op Functionality that shouldn't be in a theme
-Version: 0.1.0
+Version: 0.3.0
 Author: Code for Fort Collins
 Author URI: http://codeforfoco.org/
 Text Domain: coop-plugin
@@ -15,6 +15,9 @@ if(!defined('BIKE_COOP_PLUGIN_DIR')) define('BIKE_COOP_PLUGIN_DIR',  plugin_dir_
 if(!defined('BIKE_COOP_PLUGIN_URI')) define('BIKE_COOP_PLUGIN_URI',  plugin_dir_url( __FILE__ ));
 
 class BikeCoopPlugin{
+	
+	public static $plugin_data;
+	
 	/**
 	 * Instance of class
 	 * 
@@ -34,28 +37,32 @@ class BikeCoopPlugin{
 	 * @see
 	 * @since
 	 */
-	 public static function get_instance() {
+	public static function get_instance() {
 		if ( ! isset( self::$instance ) ) {
 			self::$instance = new self;
 		}
 		return self::$instance;
-	 }
+	}
 	 
-	 protected function __construct(){
+	protected function __construct(){
 		require_once(BIKE_COOP_PLUGIN_DIR."framework/vendor/autoload.php");
 		
+		$this->load_template_tags();
 		$this->load_classes();
 		$this->init();	
 		$this->load_modules();
-	 }
+	}
 	
-	 public function fcbc_volunteer_form() {
+	public function _wp_enqueue_scripts(){
+		wp_register_style('bike-coop-plugin', BIKE_COOP_PLUGIN_URI.'/assets/css/bike-coop-plugin.css', array(), self::$plugin_data['Version']);
+	}
+	
+	public function fcbc_volunteer_form() {
 		ob_start();
 		include 'volunteer-legacy-processor.php';
 		include 'volunteer-form.php';
 		return ob_get_clean();
 	 }
-	
 	
 	public function fcbc_abandoned_bike_form() {
 		ob_start();
@@ -63,12 +70,29 @@ class BikeCoopPlugin{
 		return ob_get_clean();
 	}
 	
-	
 	public function fcbc_mailing_list() {
 		ob_start();
 		include 'mailing-list.php';
 		return ob_get_clean();
 	}
+	
+	/**
+     * load_classes
+     * Insert description here
+     *
+     *
+     * @return
+     *
+     * @access
+     * @static
+     * @see
+     * @since
+     */
+    private function load_template_tags(){ 
+        foreach(glob(BIKE_COOP_PLUGIN_DIR."framework/inc/*.php") as $file):	 			
+			include_once($file); 
+		endforeach;
+    }
 	
     /**
      * load_classes
@@ -110,8 +134,11 @@ class BikeCoopPlugin{
     }
 	
 	protected function init(){
+		self::$plugin_data = fcbc_get_plugin_data(BIKE_COOP_PLUGIN_DIR.'bike-coop-plugin.php', false);
+		
 		add_shortcode( 'fcbc_volunteer_form', array(&$this, 'fcbc_volunteer_form') );
 		add_shortcode( 'fcbc_abandoned_bike_form',  array(&$this, 'fcbc_abandoned_bike_form') );
 		add_shortcode( 'fcbc_mailing_list',  array(&$this, 'fcbc_mailing_list' ) );
+		add_action('wp_enqueue_scripts', array(&$this, '_wp_enqueue_scripts'));
 	}
 }BikeCoopPlugin::get_instance();

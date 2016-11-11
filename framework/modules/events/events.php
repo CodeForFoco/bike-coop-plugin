@@ -37,6 +37,9 @@ class Events{
         $this->init();
     }
     
+    public function _wp_enqueue_scripts(){
+		wp_register_style('events-module', BIKE_COOP_MODULE_EVENTS_URI.'/assets/css/events-module.css', array(), BikeCoopPlugin::$plugin_data['Version']);
+	}
     
     /**
      * load_classes
@@ -64,6 +67,6 @@ class Events{
     }
     
     protected function init(){
-        
+        add_action('wp_enqueue_scripts', array(&$this, '_wp_enqueue_scripts'));
     }
 }Events::get_instance();
