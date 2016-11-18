@@ -1,16 +1,16 @@
 <?php
 
-class FCBC_Mailing_List extends WP_Widget {
+class FCBC_Mailing_List_Widget extends WP_Widget {
 
 	/**
 	 * Sets up the widgets name etc
 	 */
 	public function __construct() {
 		$widget_ops = array( 
-			'classname' => 'FCBC_Mailing_List',
+			'classname' => 'FCBC_Mailing_List_Widget',
 			'description' => 'To load the mailing list',
 		);
-		parent::__construct( 'FCBC_Mailing_List', 'Mailing List Widget', $widget_ops );
+		parent::__construct( 'FCBC_Mailing_List_Widget', 'Mailing List Widget', $widget_ops );
 	}
 
 	/**
