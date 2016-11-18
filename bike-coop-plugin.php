@@ -13,9 +13,6 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 if(!defined('BIKE_COOP_PLUGIN_DIR')) define('BIKE_COOP_PLUGIN_DIR',  plugin_dir_path( __FILE__ ));
 if(!defined('BIKE_COOP_PLUGIN_URI')) define('BIKE_COOP_PLUGIN_URI',  plugin_dir_url( __FILE__ ));
-//if(!defined('AWESOME_WOO_SHOP_MODULES_URL'))	define('AWESOME_WOO_SHOP_MODULES_URL',AWESOME_WOO_SHOP_URI.'framework/modules');
-//if(!defined('AWESOME_WOO_SHOP_MODULES_BASE'))	define('AWESOME_WOO_SHOP_MODULES_BASE', AWESOME_WOO_SHOP_DIR.'framework/modules');
-
 
 class BikeCoopPlugin{
 	/**
@@ -102,4 +99,6 @@ class BikeCoopPlugin{
 		add_shortcode( 'fcbc_abandoned_bike_form',  array(&$this, 'fcbc_abandoned_bike_form') );
 		add_shortcode( 'fcbc_mailing_list',  array(&$this, 'fcbc_mailing_list' ) );
 	}
-}BikeCoopPlugin::get_instance();
+}
+
+BikeCoopPlugin::get_instance();
