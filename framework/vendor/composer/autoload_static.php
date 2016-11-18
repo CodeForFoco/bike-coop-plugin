@@ -10,6 +10,7 @@ class ComposerStaticInitaa728294406168f07e1584e7c85816b1
         '94da49b8a6ca768bd9153ee879ff4877' => __DIR__ . '/..' . '/gambitph/titan-framework/titan-framework.php',
         'cfc85370a2e341461488957ea40eba75' => __DIR__ . '/..' . '/gambitph/titan-framework/titan-framework-embedder.php',
         '9659e70a28e71824c3663c8c56f09ed1' => __DIR__ . '/..' . '/cmb2/init.php',
+        '03cfb9dd316261721ce9f09d47dcb450' => __DIR__ . '/..' . '/elementor/elementor.php',
     );
 
     public static $prefixLengthsPsr4 = array (

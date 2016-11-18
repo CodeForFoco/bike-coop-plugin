@@ -1,0 +1,303 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "88d4e4cd6c7bfe7a859a5bb5f92fba1b",
+    "content-hash": "0928010d91b1287e9554722ee15ee913",
+    "packages": [
+        {
+            "name": "composer/installers",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/installers.git",
+                "reference": "d78064c68299743e0161004f2de3a0204e33b804"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/installers/zipball/d78064c68299743e0161004f2de3a0204e33b804",
+                "reference": "d78064c68299743e0161004f2de3a0204e33b804",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
+            },
+            "replace": {
+                "roundcube/plugin-installer": "*",
+                "shama/baton": "*"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*@dev",
+                "phpunit/phpunit": "4.1.*"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Composer\\Installers\\Plugin",
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\Installers\\": "src/Composer/Installers"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kyle Robinson Young",
+                    "email": "kyle@dontkry.com",
+                    "homepage": "https://github.com/shama"
+                }
+            ],
+            "description": "A multi-framework Composer library installer",
+            "homepage": "https://composer.github.io/installers/",
+            "keywords": [
+                "Craft",
+                "Dolibarr",
+                "Hurad",
+                "ImageCMS",
+                "MODX Evo",
+                "Mautic",
+                "OXID",
+                "Plentymarkets",
+                "RadPHP",
+                "SMF",
+                "Thelia",
+                "WolfCMS",
+                "agl",
+                "aimeos",
+                "annotatecms",
+                "attogram",
+                "bitrix",
+                "cakephp",
+                "chef",
+                "cockpit",
+                "codeigniter",
+                "concrete5",
+                "croogo",
+                "dokuwiki",
+                "drupal",
+                "elgg",
+                "expressionengine",
+                "fuelphp",
+                "grav",
+                "installer",
+                "joomla",
+                "kohana",
+                "laravel",
+                "lithium",
+                "magento",
+                "mako",
+                "mediawiki",
+                "modulework",
+                "moodle",
+                "phpbb",
+                "piwik",
+                "ppi",
+                "puppet",
+                "reindex",
+                "roundcube",
+                "shopware",
+                "silverstripe",
+                "symfony",
+                "typo3",
+                "wordpress",
+                "yawik",
+                "zend",
+                "zikula"
+            ],
+            "time": "2016-08-13 20:53:52"
+        },
+        {
+            "name": "gambitph/titan-framework",
+            "version": "1.9.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gambitph/Titan-Framework.git",
+                "reference": "793bee37350acf4ff10ebf1068aa6d16cdc44da1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gambitph/Titan-Framework/zipball/793bee37350acf4ff10ebf1068aa6d16cdc44da1",
+                "reference": "793bee37350acf4ff10ebf1068aa6d16cdc44da1",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "titan-framework.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPLv2+"
+            ],
+            "authors": [
+                {
+                    "name": "Gambit Technologies",
+                    "email": "info@gambit.ph",
+                    "homepage": "http://www.titanframework.net/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Titan Framework allows theme and plugin developers to create admin pages, options, meta boxes, and theme customizer options with just a few simple lines of code.",
+            "homepage": "https://github.com/gambitph/Titan-Framework",
+            "keywords": [
+                "Titan Framework",
+                "framework",
+                "options",
+                "titan",
+                "wordpress"
+            ],
+            "time": "2015-10-06 16:21:47"
+        },
+        {
+            "name": "jjgrainger/wp-custom-post-type-class",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jjgrainger/wp-custom-post-type-class.git",
+                "reference": "012861247b20c07307e706eecae5689dbfda98e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jjgrainger/wp-custom-post-type-class/zipball/012861247b20c07307e706eecae5689dbfda98e8",
+                "reference": "012861247b20c07307e706eecae5689dbfda98e8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "CPT": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joe Grainger",
+                    "email": "hello@joegrainger.co.uk",
+                    "homepage": "http://jjgrainger.co.uk"
+                }
+            ],
+            "description": "A single class to help you build more advanced custom post types quickly.",
+            "homepage": "https://github.com/jjgrainger/wp-custom-post-type-class",
+            "time": "2016-08-24 08:37:12"
+        },
+        {
+            "name": "mobiledetect/mobiledetectlib",
+            "version": "2.8.23",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/serbanghita/Mobile-Detect.git",
+                "reference": "b9f265f0c548568ed870f94eafbf1672f56f636c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/serbanghita/Mobile-Detect/zipball/b9f265f0c548568ed870f94eafbf1672f56f636c",
+                "reference": "b9f265f0c548568ed870f94eafbf1672f56f636c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.0.0"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "dev-master",
+                "johnkary/phpunit-speedtrap": "~1.0@dev",
+                "phpunit/phpunit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "Mobile_Detect.php"
+                ],
+                "psr-0": {
+                    "Detection": "namespaced/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Serban Ghita",
+                    "email": "serbanghita@gmail.com",
+                    "homepage": "http://mobiledetect.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Mobile_Detect is a lightweight PHP class for detecting mobile devices. It uses the User-Agent string combined with specific HTTP headers to detect the mobile environment.",
+            "homepage": "https://github.com/serbanghita/Mobile-Detect",
+            "keywords": [
+                "detect mobile devices",
+                "mobile",
+                "mobile detect",
+                "mobile detector",
+                "php mobile detect"
+            ],
+            "time": "2016-11-10 12:45:39"
+        },
+        {
+            "name": "wpackagist-plugin/cmb2",
+            "version": "2.2.3.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/cmb2/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/cmb2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/cmb2/"
+        },
+        {
+            "name": "wpackagist-plugin/elementor",
+            "version": "0.10.7",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/elementor/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/elementor.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/elementor/"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "RC",
+    "stability-flags": {
+        "jjgrainger/wp-custom-post-type-class": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
