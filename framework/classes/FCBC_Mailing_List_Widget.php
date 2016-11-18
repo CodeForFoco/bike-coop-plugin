@@ -10,7 +10,7 @@ class FCBC_Mailing_List_Widget extends WP_Widget {
 			'classname' => 'FCBC_Mailing_List_Widget',
 			'description' => 'To load the mailing list',
 		);
-		parent::__construct( 'FCBC_Mailing_List_Widget', 'Mailing List Widget', $widget_ops );
+		parent::__construct( 'FCBC_Mailing_List_Widget', 'FCBC Mailing List Widget', $widget_ops );
 	}
 
 	/**
@@ -20,7 +20,7 @@ class FCBC_Mailing_List_Widget extends WP_Widget {
 	 * @param array $instance
 	 */
 	public function widget( $args, $instance ) {
-		do_shortcode('fcbc_mailing_list');
+		echo do_shortcode('[fcbc_mailing_list]');
 	}
 
 	/**
