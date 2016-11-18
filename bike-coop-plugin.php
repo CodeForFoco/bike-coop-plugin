@@ -111,7 +111,7 @@ class BikeCoopPlugin{
 			require_once($file); 
 			
 			/** Load Widgets */
-			if(strpos( strtolower( $file), 'widget') !== false){ 
+			if(strpos( strtolower($file), 'widget') !== false){ 
 				add_action('widgets_init', function() use ($file){
 					register_widget( str_replace('.php', '', basename($file)) );
 				});
@@ -141,4 +141,6 @@ class BikeCoopPlugin{
 		add_shortcode( 'fcbc_mailing_list',  array(&$this, 'fcbc_mailing_list' ) );
 		add_action('wp_enqueue_scripts', array(&$this, '_wp_enqueue_scripts'));
 	}
-}BikeCoopPlugin::get_instance();
+}
+
+BikeCoopPlugin::get_instance();
