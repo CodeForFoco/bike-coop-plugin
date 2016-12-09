@@ -144,11 +144,14 @@ class BC_Slide_Post_Type{
 	}
 	
 	public function shortcode_slider(){
-	    ob_start();
-	    include_once(BIKE_COOP_PLUGIN_DIR.'framework/modules/slider/views/shortcodes/slider.php');
-	    $html = ob_get_contents();
-	    ob_end_clean();
+	    //var_dump($slides); die();
 	    
+	    ob_start();
+	    
+        include_once(BIKE_COOP_PLUGIN_DIR.'framework/modules/slider/views/shortcodes/slider.php');
+        $html = ob_get_contents();
+	    ob_end_clean();
+	   
 	    return $html;
 	}
 	

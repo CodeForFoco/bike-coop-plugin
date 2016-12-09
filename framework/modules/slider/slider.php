@@ -50,6 +50,7 @@ class BC_Slider{
 		foreach(glob(BC_Slider_DIR."/framework/inc/*.php") as $file):				
 			require_once($file);
 		endforeach;
+		
 		//var_dump(BC_Slider_DIR); die();
 	    /** Load Classes */
     	foreach(glob(BC_Slider_DIR."/framework/classes/*.php") as $file):				
