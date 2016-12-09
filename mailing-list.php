@@ -9,6 +9,7 @@ function is_valid_email($field) {
 	return filter_var($field, FILTER_VALIDATE_EMAIL);
 }
 
+$show_form = true;
 if (isset($_POST['email'])) {//if "email" is filled out, proceed
 	if (!is_valid_email($_POST['email'])) {
 		echo "Invalid input";
@@ -17,9 +18,10 @@ if (isset($_POST['email'])) {//if "email" is filled out, proceed
 		$email = $_POST['email'] ;
 		wp_mail("news-join@fcbikecoop.org", "Subject: Subscribe", 'Subscribe', "From: $email" );
 		echo "Thank you!  A confirmation email will be sent.  Please follow the instructions to get signed up.";
+		$show_form = false;
 	}
 }
-
+if ($show_form):
 ?>
 <form action="/mailing-list/" method="post">
 <div class="row">
@@ -30,4 +32,10 @@ if (isset($_POST['email'])) {//if "email" is filled out, proceed
 		<input name="email" type="email" id="email-label">
 	</div>
 </div>
+<div class="row">
+    <input class="button" value="Submit" type="submit">
+</div>
 </form>
+<?php 
+endif;
+?>
