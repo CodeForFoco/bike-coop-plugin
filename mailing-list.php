@@ -7,12 +7,12 @@ if (isset($_POST['email'])) {//if "email" is filled out, proceed
 	} else {//send email
 		$email = $_POST['email'] ;
 		wp_mail("news-join@fcbikecoop.org", "Subject: Subscribe", 'Subscribe', "From: $email" );
-		echo "Thank you!  A confirmation email will be sent.  Please follow the instructions to get signed up.";
+		echo "<p><em>Thank you! A confirmation email will be sent. Please follow the instructions in that email to finish getting signed up.</em></p>";
 		$show_form = false;
 	}
 }
-if ($show_form):
 ?>
+<?php if ($show_form): ?>
 <form action="/mailing-list/" method="post">
 <div class="row">
 	<div class="small-3 columns">
@@ -26,6 +26,4 @@ if ($show_form):
     <input class="button" value="Submit" type="submit">
 </div>
 </form>
-<?php 
-endif;
-?>
+<?php endif; ?>
