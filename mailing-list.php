@@ -22,7 +22,7 @@ if (isset($_POST['email'])) {//if "email" is filled out, proceed
 }
 
 ?>
-<form method="post">
+<form action="/mailing-list/" method="post">
 <div class="row">
 	<div class="small-3 columns">
 		<label for="email-label" class="right inline">Your Email</label>
