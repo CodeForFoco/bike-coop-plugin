@@ -1,14 +1,4 @@
 <?php
-
-function is_valid_email($field) {
-	//filter_var() sanitizes the e-mail
-	//address using FILTER_SANITIZE_EMAIL
-	$field = filter_var($field, FILTER_SANITIZE_EMAIL);
-	//filter_var() validates the e-mail
-	//address using FILTER_VALIDATE_EMAIL
-	return filter_var($field, FILTER_VALIDATE_EMAIL);
-}
-
 $show_form = true;
 if (isset($_POST['email'])) {//if "email" is filled out, proceed
 	if (!is_valid_email($_POST['email'])) {
