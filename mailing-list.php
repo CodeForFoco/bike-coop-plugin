@@ -17,7 +17,6 @@ if (isset($_POST['email'])) {//if "email" is filled out, proceed
 		$email = $_POST['email'] ;
 		wp_mail("news-join@fcbikecoop.org", "Subject: Subscribe", 'Subscribe', "From: $email" );
 		echo "Thank you!  A confirmation email will be sent.  Please follow the instructions to get signed up.";
-		die;
 	}
 }
 
