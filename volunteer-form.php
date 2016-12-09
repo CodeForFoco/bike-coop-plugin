@@ -1,9 +1,5 @@
 <form method="POST" enctype="multipart/form-data">
 <div class="row">
-    <h1>FC Bike Co-op Volunteer Application</h1>
-    <div class="row">
-        This application will let us know of your intent to volunteer and we'll get you plugged into the co-op via email. After you're tied in and get some volunteer hours under your belt you will be eligible for volunteer privileges. <b>Fields marked with ** are required.
-    </div>
     <div class="row">
         <div class="small-3 columns">
             <label for="first-name" class="right inline">** First Name:</label>
@@ -283,13 +279,6 @@
     <div class="row">
         <p>Any other questions, comments, or concerns?</p>
         <textarea name="concerns" rows="5" cols="65"><?php echo $concerns ?></textarea>
-    </div>
-    <div class="row">
-        <p>This is not an application for the Earn-a-Bike program. Stop by during <a
-            href="http://fcbikecoop.org/calendar.php">public hours</a> to start the Earn-a-Bike Program.</p>
-
-        <p>You do not need this form for community service. Stop by during <a href="http://fcbikecoop.org/calendar.php">public
-            hours</a> to learn about serving community service at the Bike Co-op.</p>
     </div>
     <div class="row">
         <input class="button" type="submit" value="Submit">
