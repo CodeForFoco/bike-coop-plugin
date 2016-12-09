@@ -20,7 +20,11 @@ class FCBC_Mailing_List_Widget extends WP_Widget {
 	 * @param array $instance
 	 */
 	public function widget( $args, $instance ) {
+		echo $args['before_widget'];
+		echo $args['before_title'] . 'Join our mailing list' . $args['after_title'];
+		echo '<p>Paragraph about our mailing list!</p>';
 		echo do_shortcode('[fcbc_mailing_list]');
+		echo $args['after_widget'];
 	}
 
 	/**
