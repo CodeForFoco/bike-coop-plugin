@@ -55,7 +55,9 @@ class BikeCoopPlugin{
 	
 	public function _wp_enqueue_scripts(){
 		wp_register_style('bike-coop-plugin', BIKE_COOP_PLUGIN_URI.'/assets/css/bike-coop-plugin.css', array(), self::$plugin_data['Version']);
-		wp_enqueue_scripts('mailing-list-form',  BIKE_COOP_PLUGIN_URI.'/assets/js/mailing-list.js', array('jquery'));
+		wp_enqueue_script('mailing-list-form',  BIKE_COOP_PLUGIN_URI.'/assets/js/mailing-list.js', array('jquery'));
+		wp_localize_script( 'mailing-list-form', 'fcbc',
+            array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 	}
 	
 	public function fcbc_volunteer_form() {
