@@ -4,7 +4,7 @@
 
     $(document).ready( function(){
     	
-    	$('.mailing-list-form-button').click(
+    	$('.mailing-list-form').submit(
 
 	    	var data = {
 				'action': 'fcbc_mailing_list',

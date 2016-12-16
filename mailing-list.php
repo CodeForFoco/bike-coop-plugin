@@ -8,6 +8,6 @@
 	</div>
 </div>
 <div class="row">
-    <input class="button" value="Submit" type="submit">
+    <input class="button" class="mailing-list-form-button" type="submit">
 </div>
 </form>
