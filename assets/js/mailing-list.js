@@ -4,9 +4,9 @@
 
     $(document).ready( function(){
     	
-    	$('.mailing-list-form').submit(
-
-	    	var data = {
+    	$('.mailing-list-form').submit(function(event) {
+    		event.preventDefault();
+    		var data = {
 				'action': 'fcbc_mailing_list',
 				'email': $('.mailing-list-email').val();
 			};
@@ -15,8 +15,7 @@
 			jQuery.post(ajaxurl, data, function(response) {
 				alert('Got this from the server: ' + response);
 			});
-
-    	);
+    	});
     } ); 
  
 })(jQuery);
