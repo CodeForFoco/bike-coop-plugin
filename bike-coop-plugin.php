@@ -55,6 +55,7 @@ class BikeCoopPlugin{
 	
 	public function _wp_enqueue_scripts(){
 		wp_register_style('bike-coop-plugin', BIKE_COOP_PLUGIN_URI.'/assets/css/bike-coop-plugin.css', array(), self::$plugin_data['Version']);
+		wp_enqueue_scripts('mailing-list-form',  BIKE_COOP_PLUGIN_URI.'/assets/js/mailing-list.js', array('jquery'));
 	}
 	
 	public function fcbc_volunteer_form() {
@@ -152,4 +153,22 @@ function is_valid_email($field) {
 	//filter_var() validates the e-mail
 	//address using FILTER_VALIDATE_EMAIL
 	return filter_var($field, FILTER_VALIDATE_EMAIL);
+}
+
+add_action( 'wp_ajax_fcbc_mailing_list', 'fcbc_mailing_list_process' );
+add_action( 'wp_ajax_no_priv_fcbc_mailing_list', 'fcbc_mailing_list_process' );
+function fcbc_mailing_list_process() {
+	if (isset($_POST['email'])) {//if "email" is filled out, proceed
+		if (!is_valid_email($_POST['email'])) {
+			echo "Invalid input";
+			$note = "Invalid Email Address";
+		} else {//send email
+			$email = $_POST['email'] ;
+			wp_mail("news-join@fcbikecoop.org", "Subject: Subscribe", 'Subscribe', "From: $email" );
+			echo "<p><em>Thank you! A confirmation email will be sent. Please follow the instructions in that email to finish getting signed up.</em></p>";
+			$show_form = false;
+		}
+	}
+
+	wp_die();
 }
