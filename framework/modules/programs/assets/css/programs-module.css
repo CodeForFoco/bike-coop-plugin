@@ -1,149 +1,149 @@
-.awesome-events-wrapper .card {
+.awesome-programs-wrapper .card {
   position: relative;
   display: block;
   margin-bottom: 0.75rem;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.125); }
 
-.awesome-events-wrapper .card-block {
+.awesome-programs-wrapper .card-block {
   padding: 1.25rem; }
-  .awesome-events-wrapper .card-block::after {
+  .awesome-programs-wrapper .card-block::after {
     content: "";
     display: table;
     clear: both; }
 
-.awesome-events-wrapper .card-title {
+.awesome-programs-wrapper .card-title {
   margin-bottom: 0.75rem; }
 
-.awesome-events-wrapper .card-subtitle {
+.awesome-programs-wrapper .card-subtitle {
   margin-top: -0.375rem;
   margin-bottom: 0; }
 
-.awesome-events-wrapper .card-text:last-child {
+.awesome-programs-wrapper .card-text:last-child {
   margin-bottom: 0; }
 
-.awesome-events-wrapper .card-link:hover {
+.awesome-programs-wrapper .card-link:hover {
   text-decoration: none; }
 
-.awesome-events-wrapper .card-link + .card-link {
+.awesome-programs-wrapper .card-link + .card-link {
   margin-left: 1.25rem; }
 
-.awesome-events-wrapper .card-header {
+.awesome-programs-wrapper .card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
   background-color: #f5f5f5;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
-  .awesome-events-wrapper .card-header::after {
+  .awesome-programs-wrapper .card-header::after {
     content: "";
     display: table;
     clear: both; }
 
-.awesome-events-wrapper .card-footer {
+.awesome-programs-wrapper .card-footer {
   padding: 0.75rem 1.25rem;
   background-color: #f5f5f5;
   border-top: 1px solid rgba(0, 0, 0, 0.125); }
-  .awesome-events-wrapper .card-footer::after {
+  .awesome-programs-wrapper .card-footer::after {
     content: "";
     display: table;
     clear: both; }
 
-.awesome-events-wrapper .card-header-tabs {
+.awesome-programs-wrapper .card-header-tabs {
   margin-right: -0.625rem;
   margin-bottom: -0.75rem;
   margin-left: -0.625rem;
   border-bottom: 0; }
 
-.awesome-events-wrapper .card-header-pills {
+.awesome-programs-wrapper .card-header-pills {
   margin-right: -0.625rem;
   margin-left: -0.625rem; }
 
-.awesome-events-wrapper .card-primary {
+.awesome-programs-wrapper .card-primary {
   background-color: #0275d8;
   border-color: #0275d8; }
-  .awesome-events-wrapper .card-primary .card-header,
-  .awesome-events-wrapper .card-primary .card-footer {
+  .awesome-programs-wrapper .card-primary .card-header,
+  .awesome-programs-wrapper .card-primary .card-footer {
     background-color: transparent; }
 
-.awesome-events-wrapper .card-success {
+.awesome-programs-wrapper .card-success {
   background-color: #5cb85c;
   border-color: #5cb85c; }
-  .awesome-events-wrapper .card-success .card-header,
-  .awesome-events-wrapper .card-success .card-footer {
+  .awesome-programs-wrapper .card-success .card-header,
+  .awesome-programs-wrapper .card-success .card-footer {
     background-color: transparent; }
 
-.awesome-events-wrapper .card-info {
+.awesome-programs-wrapper .card-info {
   background-color: #5bc0de;
   border-color: #5bc0de; }
-  .awesome-events-wrapper .card-info .card-header,
-  .awesome-events-wrapper .card-info .card-footer {
+  .awesome-programs-wrapper .card-info .card-header,
+  .awesome-programs-wrapper .card-info .card-footer {
     background-color: transparent; }
 
-.awesome-events-wrapper .card-warning {
+.awesome-programs-wrapper .card-warning {
   background-color: #f0ad4e;
   border-color: #f0ad4e; }
-  .awesome-events-wrapper .card-warning .card-header,
-  .awesome-events-wrapper .card-warning .card-footer {
+  .awesome-programs-wrapper .card-warning .card-header,
+  .awesome-programs-wrapper .card-warning .card-footer {
     background-color: transparent; }
 
-.awesome-events-wrapper .card-danger {
+.awesome-programs-wrapper .card-danger {
   background-color: #d9534f;
   border-color: #d9534f; }
-  .awesome-events-wrapper .card-danger .card-header,
-  .awesome-events-wrapper .card-danger .card-footer {
+  .awesome-programs-wrapper .card-danger .card-header,
+  .awesome-programs-wrapper .card-danger .card-footer {
     background-color: transparent; }
 
-.awesome-events-wrapper .card-outline-primary {
+.awesome-programs-wrapper .card-outline-primary {
   background-color: transparent;
   border-color: #0275d8; }
 
-.awesome-events-wrapper .card-outline-secondary {
+.awesome-programs-wrapper .card-outline-secondary {
   background-color: transparent;
   border-color: #ccc; }
 
-.awesome-events-wrapper .card-outline-info {
+.awesome-programs-wrapper .card-outline-info {
   background-color: transparent;
   border-color: #5bc0de; }
 
-.awesome-events-wrapper .card-outline-success {
+.awesome-programs-wrapper .card-outline-success {
   background-color: transparent;
   border-color: #5cb85c; }
 
-.awesome-events-wrapper .card-outline-warning {
+.awesome-programs-wrapper .card-outline-warning {
   background-color: transparent;
   border-color: #f0ad4e; }
 
-.awesome-events-wrapper .card-outline-danger {
+.awesome-programs-wrapper .card-outline-danger {
   background-color: transparent;
   border-color: #d9534f; }
 
-.awesome-events-wrapper .card-inverse .card-header,
-.awesome-events-wrapper .card-inverse .card-footer {
+.awesome-programs-wrapper .card-inverse .card-header,
+.awesome-programs-wrapper .card-inverse .card-footer {
   border-color: rgba(255, 255, 255, 0.2); }
 
-.awesome-events-wrapper .card-inverse .card-header,
-.awesome-events-wrapper .card-inverse .card-footer,
-.awesome-events-wrapper .card-inverse .card-title,
-.awesome-events-wrapper .card-inverse .card-blockquote {
+.awesome-programs-wrapper .card-inverse .card-header,
+.awesome-programs-wrapper .card-inverse .card-footer,
+.awesome-programs-wrapper .card-inverse .card-title,
+.awesome-programs-wrapper .card-inverse .card-blockquote {
   color: #fff; }
 
-.awesome-events-wrapper .card-inverse .card-link,
-.awesome-events-wrapper .card-inverse .card-text,
-.awesome-events-wrapper .card-inverse .card-subtitle,
-.awesome-events-wrapper .card-inverse .card-blockquote .blockquote-footer {
+.awesome-programs-wrapper .card-inverse .card-link,
+.awesome-programs-wrapper .card-inverse .card-text,
+.awesome-programs-wrapper .card-inverse .card-subtitle,
+.awesome-programs-wrapper .card-inverse .card-blockquote .blockquote-footer {
   color: rgba(255, 255, 255, 0.65); }
 
-.awesome-events-wrapper .card-inverse .card-link:focus {
+.awesome-programs-wrapper .card-inverse .card-link:focus {
   color: #fff; }
 
-.awesome-events-wrapper .card-inverse .card-link:hover {
+.awesome-programs-wrapper .card-inverse .card-link:hover {
   color: #fff; }
 
-.awesome-events-wrapper .card-blockquote {
+.awesome-programs-wrapper .card-blockquote {
   padding: 0;
   margin-bottom: 0;
   border-left: 0; }
 
-.awesome-events-wrapper .card-img-overlay {
+.awesome-programs-wrapper .card-img-overlay {
   position: absolute;
   top: 0;
   right: 0;
@@ -152,14 +152,14 @@
   padding: 1.25rem; }
 
 @media (min-width: 576px) {
-  .awesome-events-wrapper .card-deck {
+  .awesome-programs-wrapper .card-deck {
     display: -webkit-box;
     display: flex;
     flex-flow: row wrap;
     margin-right: -0.625rem;
     margin-bottom: 0.75rem;
     margin-left: -0.625rem; }
-    .awesome-events-wrapper .card-deck .card {
+    .awesome-programs-wrapper .card-deck .card {
       -webkit-box-flex: 1;
       flex: 1 0 0;
       margin-right: 0.625rem;
@@ -167,81 +167,79 @@
       margin-left: 0.625rem; } }
 
 @media (min-width: 576px) {
-  .awesome-events-wrapper .card-group {
+  .awesome-programs-wrapper .card-group {
     display: -webkit-box;
     display: flex;
     flex-flow: row wrap; }
-    .awesome-events-wrapper .card-group .card {
+    .awesome-programs-wrapper .card-group .card {
       -webkit-box-flex: 1;
       flex: 1 0 0; }
-      .awesome-events-wrapper .card-group .card + .card {
+      .awesome-programs-wrapper .card-group .card + .card {
         margin-left: 0;
         border-left: 0; } }
 
 @media (min-width: 576px) {
-  .awesome-events-wrapper .card-columns {
+  .awesome-programs-wrapper .card-columns {
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
     -webkit-column-gap: 1.25rem;
     -moz-column-gap: 1.25rem;
     column-gap: 1.25rem; }
-    .awesome-events-wrapper .card-columns .card {
+    .awesome-programs-wrapper .card-columns .card {
       display: inline-block;
       width: 100%; } }
 
-.awesome-events-wrapper .awesome-events {
+.awesome-programs-wrapper .title > a sub {
+  font-size: .88rem;
+  bottom: 0; }
+
+.awesome-programs-wrapper .awesome-programs {
   display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
   margin-left: -6px !important;
-  margin-right: -6px !important;
-  /*.slick-helper {
-            @include media-breakpoint-up(lg) {
-                @include make-col(4);
-                min-width: 300px;
-            }
-        }*/ }
+  margin-right: -6px !important; }
   @media (max-width: 767px) {
-    .awesome-events-wrapper .awesome-events {
+    .awesome-programs-wrapper .awesome-programs {
       text-align: center; } }
   @media (min-width: 576px) {
-    .awesome-events-wrapper .awesome-events {
+    .awesome-programs-wrapper .awesome-programs {
       margin-right: -15px;
       margin-left: -15px; } }
   @media (min-width: 768px) {
-    .awesome-events-wrapper .awesome-events {
+    .awesome-programs-wrapper .awesome-programs {
       margin-right: -15px;
       margin-left: -15px; } }
   @media (min-width: 992px) {
-    .awesome-events-wrapper .awesome-events {
+    .awesome-programs-wrapper .awesome-programs {
       margin-right: -15px;
       margin-left: -15px; } }
   @media (min-width: 1200px) {
-    .awesome-events-wrapper .awesome-events {
+    .awesome-programs-wrapper .awesome-programs {
       margin-right: -15px;
       margin-left: -15px; } }
-  .awesome-events-wrapper .awesome-events .event-wrapper {
+  .awesome-programs-wrapper .awesome-programs .program-wrapper {
     padding: 0 6px;
     text-align: left;
     position: relative; }
     @media (max-width: 767px) {
-      .awesome-events-wrapper .awesome-events .event-wrapper {
+      .awesome-programs-wrapper .awesome-programs .program-wrapper {
         margin-left: auto;
         margin-right: auto; } }
     @media (min-width: 576px) {
-      .awesome-events-wrapper .awesome-events .event-wrapper {
+      .awesome-programs-wrapper .awesome-programs .program-wrapper {
         -webkit-box-flex: 0;
         flex: 0 0 50%;
         max-width: 50%; } }
     @media (min-width: 992px) {
-      .awesome-events-wrapper .awesome-events .event-wrapper {
+      .awesome-programs-wrapper .awesome-programs .program-wrapper {
         -webkit-box-flex: 0;
         flex: 0 0 33.3333333333%;
         max-width: 33.3333333333%; } }
-    .awesome-events-wrapper .awesome-events .event-wrapper .inner {
+    .awesome-programs-wrapper .awesome-programs .program-wrapper .inner {
       position: absolute;
       bottom: 15px;
       left: 0;
@@ -249,7 +247,7 @@
       background: rgba(0, 0, 0, 0.66);
       display: block;
       width: 100%; }
-      .awesome-events-wrapper .awesome-events .event-wrapper .inner .card-title {
+      .awesome-programs-wrapper .awesome-programs .program-wrapper .inner .card-title {
         margin-bottom: 0; }
 
-/*# sourceMappingURL=events-module.css.map */
+/*# sourceMappingURL=programs-module.css.map */

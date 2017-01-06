@@ -8,14 +8,22 @@
     @import "../../../../../node_modules/bootstrap/scss/mixins/breakpoints";
     //@import "../../../../../node_modules/bootstrap/scss/grid";
     @import '../../../../../node_modules/bootstrap/scss/card';
-    
+
+    .title{
+        > a{
+            sub{
+                font-size: .88rem; bottom: 0;
+            }
+        }
+    }
+
     .awesome-programs{
         @include media-breakpoint-down(sm){
             text-align: center;
         }
-        
-        @include make-row(); margin-left: -6px !important; margin-right: -6px !important; 
-        
+
+        @include make-row(); margin-left: -6px !important; margin-right: -6px !important;
+
         .program-wrapper{
             @include media-breakpoint-down(sm){
                 margin-left: auto; margin-right: auto;
@@ -27,7 +35,7 @@
             }
             
             @include media-breakpoint-up(lg){
-                @include make-col(4);     
+                @include make-col(4);
             }
 
             .inner{

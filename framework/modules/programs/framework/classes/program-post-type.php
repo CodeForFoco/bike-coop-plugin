@@ -58,23 +58,25 @@ if ( ! class_exists( 'Awesome_Programs_Post_Type' ) ) :
 
 			$cmb_details = new_cmb2_box( array(
 				'id'            => $prefix . 'metabox',
-				'title'         => __( 'Program Details', 'awesome_programs' ),
+				'title'         => __( 'Program Settings', 'awesome_programs' ),
 				'object_types'  => array( 'program', ), // Post type
-				'priority'   => 'core',
-				'show_names' => true, // Show field names on the left
-				'closed'     => false, // true to keep the metabox closed by default
+				'priority'      => 'core',
+                'context'       => 'side',
+				'show_names'    => true, // Show field names on the left
+				'closed'        => false, // true to keep the metabox closed by default
 			) );
 			
 			$cmb_details->add_field( array(
-			    'name' => 'Date/Time',
-			    'id'   => 'wiki_test_datetime_timestamp',
-			    'type' => 'text_datetime_timestamp',
+			    'name'  => 'Show on homepage',
+			    'id'    => $prefix.'featured',
+			    'type'  => 'checkbox',
+                'desc'  =>  'Check to feature this program on the home page'
 			) );
 		
 			$cmb_details->add_field( array(
-				'name'       	=> __( 'URL', 'awesome_programs' ),
-				'desc'       	=> __( 'Specify a url if details about program is on different (ie: facebook)', 'awesome_programs' ),
-				'id'         	=> $prefix . 'url',
+				'name'       	=> __( 'External URL', 'awesome_programs' ),
+				'desc'       	=> __( 'Enter URL to link programs to partner sites.', 'awesome_programs' ),
+				'id'         	=> $prefix . 'external_url',
 				'type'       	=> 'text_url',
 				'attributes' 	=> array(
 					
@@ -162,9 +164,17 @@ if ( ! class_exists( 'Awesome_Programs_Post_Type' ) ) :
 			return $new_columns;
 		}
 		
-		public function shortcode_upcoming_programs(){
+		public function shortcode_programs($atts){
+            $atts = shortcode_atts(
+                array(
+                    'count'                 =>  3,
+                    'title'                 =>  'Co-op Programs',
+                    'all_programs_link'     =>  '',
+                    'all_programs_text'     =>  'All Programs'
+                ), $atts, 'fcbc_programs' );
+
 		    ob_start();
-		    include_once(BIKE_COOP_MODULE_EVENTS_DIR.'/views/shortcodes/upcoming-programs.php');
+		    include_once(BIKE_COOP_MODULE_PROGRAMS_DIR . '/views/shortcodes/programs.php');
 		    $html = ob_get_contents();
 		    ob_end_clean();
 		    
@@ -176,8 +186,6 @@ if ( ! class_exists( 'Awesome_Programs_Post_Type' ) ) :
 		*	Add shop column data
 		*/
 		public function custom_program_columns_data( $column, $post_id ){ return;
-			global $CAP;
-
 			switch ( $column ) {
 				case 'awesome_programs_primary_contact':
 				    
@@ -197,7 +205,7 @@ if ( ! class_exists( 'Awesome_Programs_Post_Type' ) ) :
 		private function init(){
 			$this->register_post_type();
 			
-			add_shortcode( 'fcbc_upcoming_programs',  array(&$this, 'shortcode_upcoming_programs' ) );
+			add_shortcode( 'fcbc_programs',  array(&$this, 'shortcode_programs' ) );
 			
 			/** Load front-end scripts and styles */
 			//add_action( 'wp_enqueue_scripts', array(&$this, 'load_styles_and_scripts'), 1 );
