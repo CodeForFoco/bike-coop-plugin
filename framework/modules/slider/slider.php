@@ -28,7 +28,7 @@ class BC_Slider{
 		
 		//wp_enqueue_style( 'bc-module-slider', BC_Slider_URI . 'assets/css/module-ads.min.css', array('bc-styles'),'1' );
 		
-		wp_enqueue_script( 'bc-module-slider', BC_Slider_URI . 'assets/js/module-ads.min.css', array(),'1', true );
+		wp_enqueue_script( 'bc-module-slider', BC_Slider_URI . '/assets/css/slider-module.min.css', array(),'1', true );
 	}
 
 	

@@ -22,6 +22,7 @@
 <?php if($events_query->have_posts()): ?>
 <?php wp_enqueue_style('events-module'); ?>
 <section class='awesome-events-wrapper'>
+    <h2 class='title'> Upcoming Events</h2>
     <div class='awesome-events'>
         <?php while($events_query->have_posts()): $events_query->the_post(); ?>
         <div class="event-wrapper">
@@ -43,7 +44,9 @@
                  <?php endif; ?>
                   <div class="card-img-overlay">
                       <div class="inner">
-                        <h4 class="card-title"><?php the_title();?></h4>
+                          <div class="card-text">
+                            <h4 class="card-title"><?php the_title();?></h4>
+                          </div>
                       </div>
                     <!--<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
