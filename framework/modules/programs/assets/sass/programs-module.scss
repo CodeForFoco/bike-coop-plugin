@@ -1,0 +1,43 @@
+@import 'variables';
+@import '../../../../../node_modules/bootstrap/scss/variables';
+@import '../../../../../node_modules/bootstrap/scss/mixins';
+
+.awesome-programs-wrapper{
+    @import "../../../../../node_modules/bootstrap/scss/mixins/grid-framework";
+    @import "../../../../../node_modules/bootstrap/scss/mixins/grid";
+    @import "../../../../../node_modules/bootstrap/scss/mixins/breakpoints";
+    //@import "../../../../../node_modules/bootstrap/scss/grid";
+    @import '../../../../../node_modules/bootstrap/scss/card';
+    
+    .awesome-programs{
+        @include media-breakpoint-down(sm){
+            text-align: center;
+        }
+        
+        @include make-row(); margin-left: -6px !important; margin-right: -6px !important; 
+        
+        .program-wrapper{
+            @include media-breakpoint-down(sm){
+                margin-left: auto; margin-right: auto;
+            }
+            padding: 0 6px; text-align: left; position: relative;
+            
+            @include media-breakpoint-up(sm){
+                @include make-col(6);
+            }
+            
+            @include media-breakpoint-up(lg){
+                @include make-col(4);     
+            }
+
+            .inner{
+                position: absolute; bottom: 15px; left: 0; padding-left: 15px; background: rgba(#000, 0.66); display: block; width: 100%;
+
+                .card-title{
+                    margin-bottom: 0;
+                }
+            }
+            
+        }
+    }
+}
