@@ -20,7 +20,7 @@
             @include media-breakpoint-down(sm){
                 margin-left: auto; margin-right: auto;
             }
-            padding: 0 6px; text-align: left; 
+            padding: 0 6px; text-align: left; position: relative;
             
             @include media-breakpoint-up(sm){
                 @include make-col(6);
@@ -28,6 +28,14 @@
             
             @include media-breakpoint-up(lg){
                 @include make-col(4);     
+            }
+
+            .inner{
+                position: absolute; bottom: 15px; left: 0; padding-left: 15px; background: rgba(#000, 0.66); display: block; width: 100%;
+
+                .card-title{
+                    margin-bottom: 0;
+                }
             }
             
         }
