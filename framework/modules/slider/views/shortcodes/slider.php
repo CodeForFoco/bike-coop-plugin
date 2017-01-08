@@ -38,7 +38,7 @@
     }
     
     .fcbc-slider-wrapper{
-        positio: relative; min-height: 680px; background-repeat: no-repeat; background-size: cover;
+        position: relative; min-height: 680px; background-repeat: no-repeat; background-size: cover;
     }
     
     .fcbc-slider-nav{
