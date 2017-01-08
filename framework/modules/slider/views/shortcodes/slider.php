@@ -9,7 +9,16 @@
         <?php $slides = get_posts($args); ?>
         <?php foreach($slides as $slide): ?>
             <div class='fcbc-slider-wrapper' style="background-image:url(<?php echo get_the_post_thumbnail_url($slide->ID); ?>)">
-                <?php echo $slide->post_title; ?>
+              <div class="tagline">
+                <div class="row">
+                  <h1><?php echo $slide->post_title; ?></h1>
+                  <h4 class="subheader"><?php echo get_the_excerpt($slide->ID); ?></h4>
+                  <a role="button" class="download large button sites-button same-page-link" href="<?php echo $slide->post_title; ?>">
+                    <i class="fa fa-bicycle" aria-hidden="true"></i>
+                    <span><?php echo $slide->post_title; ?></span>
+                  </a>
+                </div>
+              </div>
             </div>
         <?php endforeach; ?>
     </div>
