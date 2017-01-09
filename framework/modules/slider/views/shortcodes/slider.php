@@ -34,6 +34,7 @@
             speed: 300,
             autoplay: true,
             autoplaySpeed: 3200,
+            dots: true,
             nextArrow:  "<a class='fcbc-slider-nav right' href='javascript:void(0);'>"+
                           "<i class='fa fa-chevron-circle-right'></i>"+
                         "</a>",
