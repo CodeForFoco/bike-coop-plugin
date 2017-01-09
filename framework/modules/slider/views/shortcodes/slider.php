@@ -1,7 +1,10 @@
 <?php 
     $args = array(  
         'post_type'     =>  'slide',
-        'post_status'   =>  'publish'
+        'post_status'   =>  'publish',
+        'order'         =>  'ASC',
+        'orderby' 			=>  'meta_value',
+        'meta_key'      =>  'slider-slide-position'
     );
 ?>
 <div class='fcbc-slider-wrapper'>
@@ -9,7 +12,16 @@
         <?php $slides = get_posts($args); ?>
         <?php foreach($slides as $slide): ?>
             <div class='fcbc-slider-wrapper' style="background-image:url(<?php echo get_the_post_thumbnail_url($slide->ID); ?>)">
-                <?php echo $slide->post_title; ?>
+              <div class="tagline">
+                <div class="row">
+                  <h1><?php echo $slide->post_title; ?></h1>
+                  <h4 class="subheader"><?php echo get_the_excerpt($slide->ID); ?></h4>
+                  <a role="button" class="download large button sites-button same-page-link" 
+                    href="<?php echo get_post_meta($slide->ID, 'slider-button-url', true); ?>">
+                    <?php echo get_post_meta($slide->ID, 'slider-button-text', true); ?>
+                  </a>
+                </div>
+              </div>
             </div>
         <?php endforeach; ?>
     </div>
@@ -22,6 +34,7 @@
             speed: 300,
             autoplay: true,
             autoplaySpeed: 3200,
+            dots: true,
             nextArrow:  "<a class='fcbc-slider-nav right' href='javascript:void(0);'>"+
                           "<i class='fa fa-chevron-circle-right'></i>"+
                         "</a>",
@@ -31,25 +44,3 @@
         });
     });
 </script>
-
-<style>
-    .fcbc-slider{
-        position: relative;
-    }
-    
-    .fcbc-slider-wrapper{
-        positio: relative; min-height: 680px; background-repeat: no-repeat; background-size: cover;
-    }
-    
-    .fcbc-slider-nav{
-        position: absolute; top: 50%; transform: translateY(-50%); z-index: 10;
-    }
-    
-    .fcbc-slider-nav.left{
-        left: 15px; 
-    }
-    
-    .fcbc-slider-nav.right{
-        right: 15px;
-    }
-</style>

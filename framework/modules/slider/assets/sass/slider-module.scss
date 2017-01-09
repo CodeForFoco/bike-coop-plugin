@@ -1,0 +1,67 @@
+// TODO: eliminate interdependency between theme and slider plugin
+// TODO: small screens need love
+// TODO: improve visibility of slider dots
+// TODO: vertically center tagline and nav arrows?
+
+// Settings
+$nav-arrow-color: #eee;
+$nav-arrow-hover-color: #fff;
+$nav-arrow-spacing: 15px;
+$min-slide-height: 35rem;
+$vertical-median: $min-slide-height / 3;
+
+.fcbc-slider {
+  position: relative;
+}
+
+.fcbc-slider-wrapper.slick-slide {
+  position: relative;
+  min-height: 25rem;
+  @media screen and (min-width: 40em) {
+    min-height: 35rem;
+  }
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// Cheap theme override for container
+#front-hero .fcbc-slider .tagline {
+  padding: 1rem 3.5rem;
+}
+
+// Slider page indicators
+.fcbc-slider-wrapper .slick-dots {
+  bottom: 0;
+
+  li button:before {
+    font-size: 27px;
+  }
+}
+
+// Left/right nav arrows
+.fcbc-slider-nav {
+  position: absolute;
+  top: $vertical-median;
+  transform: scale3d(1,1,1);
+  z-index: 10;
+  color: $nav-arrow-color;
+  font-size: 2.2em;
+  transition: 300ms;
+
+  &:hover {
+    transform: scale3d(1.2,1.2,1.2);
+  }
+
+  &:focus,
+  &:hover {
+    color: $nav-arrow-hover-color;
+  }
+
+  &.left {
+    left: $nav-arrow-spacing;
+  }
+
+  &.right {
+    right: $nav-arrow-spacing;
+  }
+}

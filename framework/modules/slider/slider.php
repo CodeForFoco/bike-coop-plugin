@@ -20,17 +20,13 @@ class BC_Slider{
 	}
 	
 	public function wp_enqueue_scripts(){
-	    //Global styles
-	    //wp_enqueue_style( 'bc-module-slick', BC_Slider_URI . 'assets/css/vendor/slick/slick.css', array(),'1' );
-		
-		// Global Styles
-		//wp_enqueue_script( 'bc-module-slick', BC_Slider_URI . 'assets/js/vendor/slick.min.js', array(),'1' );
-		
-		//wp_enqueue_style( 'bc-module-slider', BC_Slider_URI . 'assets/css/module-ads.min.css', array('bc-styles'),'1' );
-		
-		wp_enqueue_script( 'bc-module-slider', BC_Slider_URI . '/assets/css/slider-module.min.css', array(),'1', true );
+	    // Slick slider
+	    wp_enqueue_style( 'bc-module-slick', BC_Slider_URI . '/assets/css/vendor/slick/slick.css', array(), '1' );
+	    wp_enqueue_style( 'bc-module-slick-theme', BC_Slider_URI . '/assets/css/vendor/slick/slick-theme.css', array(), '1' );
+	    wp_enqueue_style( 'bc-module-slick-overrides', BC_Slider_URI . '/assets/css/slider-module.min.css', array(), '1' );
 	}
 
+  // TODO: create instructions for user (custom fields, etc.)
 	
 	public function browser_body_class($classes) {
 		$classes[]	= 'bc-slider';
