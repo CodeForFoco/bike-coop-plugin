@@ -1,2 +1,41 @@
+.fcbc-slider {
+  position: relative; }
+
+.fcbc-slider-wrapper.slick-slide {
+  position: relative;
+  min-height: 25rem;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  @media screen and (min-width: 40em) {
+    .fcbc-slider-wrapper.slick-slide {
+      min-height: 35rem; } }
+
+#front-hero .fcbc-slider .tagline {
+  padding: 1rem 3.5rem; }
+
+.fcbc-slider-wrapper .slick-dots {
+  bottom: 0; }
+  .fcbc-slider-wrapper .slick-dots li button:before {
+    font-size: 27px; }
+
+.fcbc-slider-nav {
+  position: absolute;
+  top: 11.6666666667rem;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  z-index: 10;
+  color: #eee;
+  font-size: 2.2em;
+  -webkit-transition: 300ms;
+  transition: 300ms; }
+  .fcbc-slider-nav:hover {
+    -webkit-transform: scale3d(1.2, 1.2, 1.2);
+    transform: scale3d(1.2, 1.2, 1.2); }
+  .fcbc-slider-nav:focus, .fcbc-slider-nav:hover {
+    color: #fff; }
+  .fcbc-slider-nav.left {
+    left: 15px; }
+  .fcbc-slider-nav.right {
+    right: 15px; }
 
 /*# sourceMappingURL=slider-module.min.css.map */

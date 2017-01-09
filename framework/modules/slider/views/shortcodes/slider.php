@@ -43,25 +43,3 @@
         });
     });
 </script>
-
-<style>
-    .fcbc-slider{
-        position: relative;
-    }
-    
-    .fcbc-slider-wrapper{
-        position: relative; min-height: 680px; background-repeat: no-repeat; background-size: cover;
-    }
-    
-    .fcbc-slider-nav{
-        position: absolute; top: 50%; transform: translateY(-50%); z-index: 10;
-    }
-    
-    .fcbc-slider-nav.left{
-        left: 15px; 
-    }
-    
-    .fcbc-slider-nav.right{
-        right: 15px;
-    }
-</style>
