@@ -26,6 +26,7 @@ class BC_Slider{
 	    wp_enqueue_style( 'bc-module-slick-overrides', BC_Slider_URI . '/assets/css/slider-module.min.css', array(), '1' );
 	}
 
+  // TODO: create instructions for user (custom fields, etc.)
 	
 	public function browser_body_class($classes) {
 		$classes[]	= 'bc-slider';
