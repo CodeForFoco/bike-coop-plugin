@@ -1,7 +1,10 @@
 <?php 
     $args = array(  
         'post_type'     =>  'slide',
-        'post_status'   =>  'publish'
+        'post_status'   =>  'publish',
+        'order'         =>  'ASC',
+        'orderby' 			=>  'meta_value',
+        'meta_key'      =>  'slider-slide-position'
     );
 ?>
 <div class='fcbc-slider-wrapper'>
@@ -13,9 +16,9 @@
                 <div class="row">
                   <h1><?php echo $slide->post_title; ?></h1>
                   <h4 class="subheader"><?php echo get_the_excerpt($slide->ID); ?></h4>
-                  <a role="button" class="download large button sites-button same-page-link" href="<?php echo $slide->post_title; ?>">
-                    <i class="fa fa-bicycle" aria-hidden="true"></i>
-                    <span><?php echo $slide->post_title; ?></span>
+                  <a role="button" class="download large button sites-button same-page-link" 
+                    href="<?php echo get_post_meta($slide->ID, 'slider-button-url', true); ?>">
+                    <?php echo get_post_meta($slide->ID, 'slider-button-text', true); ?>
                   </a>
                 </div>
               </div>

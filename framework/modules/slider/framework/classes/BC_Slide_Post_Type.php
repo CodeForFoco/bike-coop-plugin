@@ -128,7 +128,7 @@ class BC_Slide_Post_Type{
 				'has_archive' 			=> 	true,
 				'menu_position' 		=> 	8,
 				'menu_icon' 			=> 	'dashicons-layout',
-				'supports' 				=> 	array('title', 'excerpt', 'content','thumbnail', 'post-formats')
+				'supports' 				=> 	array('title', 'excerpt', 'content','thumbnail', 'post-formats', 'custom-fields')
 			)
 		);
 		
