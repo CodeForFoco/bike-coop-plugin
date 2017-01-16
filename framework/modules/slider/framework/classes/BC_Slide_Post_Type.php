@@ -143,11 +143,36 @@ class BC_Slide_Post_Type{
 		),$labels);
 	}
 	
-	public function shortcode_slider(){
-	    //var_dump($slides); die();
-	    
+  /**
+   * Slide slugs passed in from shortcode
+   * @var array
+   */
+  private $slides_to_include;
+  
+  /**
+   * Set the private variable for slides from shortcode
+   * @param string Slides to use in slider
+   */
+  public function set_slider_slides($slides) {
+    $this->slides_to_include = $slides;
+  }  
+
+  /**
+   * Get slides from private variable (if none chose, all will be used)
+   * @return string Slides to use in slider
+   */
+  public function get_slides_for_slider() {
+    return $this->slides_to_include;
+  }
+    
+	public function shortcode_slider($atts){
+      extract(shortcode_atts(array(
+       'slide_slugs' => '',
+      ), $atts));
+      
+      $this->set_slider_slides($slide_slugs);
+      
 	    ob_start();
-	    
         include_once(BIKE_COOP_PLUGIN_DIR.'framework/modules/slider/views/shortcodes/slider.php');
         $html = ob_get_contents();
 	    ob_end_clean();
