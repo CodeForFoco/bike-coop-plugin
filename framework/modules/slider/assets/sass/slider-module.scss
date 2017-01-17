@@ -17,6 +17,9 @@ $vertical-median: $min-slide-height / 3;
 .fcbc-slider-wrapper.slick-slide {
   position: relative;
   min-height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   @media screen and (min-width: 40em) {
     min-height: 35rem;
   }
@@ -41,8 +44,9 @@ $vertical-median: $min-slide-height / 3;
 // Left/right nav arrows
 .fcbc-slider-nav {
   position: absolute;
-  top: $vertical-median;
-  transform: scale3d(1,1,1);
+  top: 50%;
+  transform: translateY(-50%) scale3d(1,1,1);
+  line-height: 1;
   z-index: 10;
   color: $nav-arrow-color;
   font-size: 2.2em;

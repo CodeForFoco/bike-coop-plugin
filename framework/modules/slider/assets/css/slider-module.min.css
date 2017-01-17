@@ -4,6 +4,14 @@
 .fcbc-slider-wrapper.slick-slide {
   position: relative;
   min-height: 25rem;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  min-height: 20rem;
   background-repeat: no-repeat;
   background-size: cover; }
   @media screen and (min-width: 40em) {
@@ -20,9 +28,10 @@
 
 .fcbc-slider-nav {
   position: absolute;
-  top: 11.6666666667rem;
-  -webkit-transform: scale3d(1, 1, 1);
-  transform: scale3d(1, 1, 1);
+  top: 50%;
+  -webkit-transform: translateY(-50%) scale3d(1, 1, 1);
+  transform: translateY(-50%) scale3d(1, 1, 1);
+  line-height: 1;
   z-index: 10;
   color: #eee;
   font-size: 2.2em;
