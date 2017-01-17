@@ -143,11 +143,36 @@ class BC_Slide_Post_Type{
 		),$labels);
 	}
 	
-	public function shortcode_slider(){
-	    //var_dump($slides); die();
-	    
+  /**
+   * Slide slugs passed in from shortcode
+   * @var array
+   */
+  private $slides_to_include;
+  
+  /**
+   * Set the private variable for slides from shortcode
+   * @param string Slides to use in slider
+   */
+  public function set_slider_slides($slides) {
+    $this->slides_to_include = $slides;
+  }  
+
+  /**
+   * Get slides from private variable (if none chose, all will be used)
+   * @return string Slides to use in slider
+   */
+  public function get_slides_for_slider() {
+    return $this->slides_to_include;
+  }
+  
+	public function shortcode_slider($atts){
+      extract(shortcode_atts(array(
+       'slide_slugs' => '',
+      ), $atts));
+      
+      $this->set_slider_slides($slide_slugs);
+      
 	    ob_start();
-	    
         include_once(BIKE_COOP_PLUGIN_DIR.'framework/modules/slider/views/shortcodes/slider.php');
         $html = ob_get_contents();
 	    ob_end_clean();
@@ -172,5 +197,20 @@ class BC_Slide_Post_Type{
 		
 		add_shortcode( 'fcbc_slider',  array(&$this, 'shortcode_slider' ) );
 	}
-}BC_Slide_Post_Type::get_instance();
+}
+
+BC_Slide_Post_Type::get_instance();
+
+function check_shortcodes_for_slider( $post ) {
+  /**
+  highlight_string("<?php\n\$data =\n" . var_export($matches, true) . ";\n?>");
+  */
+  $pattern = get_shortcode_regex();
+    
+  if (preg_match_all( '/'. $pattern .'/s', $post->post_content, $matches ) && array_key_exists( 2, $matches ) && in_array( 'fcbc_slider', $matches[2] ) ) {
+     echo do_shortcode($matches[0][0]);
+  }
+}
+
+add_action( 'full_width_slider', 'check_shortcodes_for_slider' );
 ?>
