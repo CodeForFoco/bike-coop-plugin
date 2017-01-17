@@ -164,7 +164,7 @@ class BC_Slide_Post_Type{
   public function get_slides_for_slider() {
     return $this->slides_to_include;
   }
-    
+  
 	public function shortcode_slider($atts){
       extract(shortcode_atts(array(
        'slide_slugs' => '',
@@ -197,5 +197,20 @@ class BC_Slide_Post_Type{
 		
 		add_shortcode( 'fcbc_slider',  array(&$this, 'shortcode_slider' ) );
 	}
-}BC_Slide_Post_Type::get_instance();
+}
+
+BC_Slide_Post_Type::get_instance();
+
+function check_shortcodes_for_slider( $post ) {
+  /**
+  highlight_string("<?php\n\$data =\n" . var_export($matches, true) . ";\n?>");
+  */
+  $pattern = get_shortcode_regex();
+    
+  if (preg_match_all( '/'. $pattern .'/s', $post->post_content, $matches ) && array_key_exists( 2, $matches ) && in_array( 'fcbc_slider', $matches[2] ) ) {
+     echo do_shortcode($matches[0][0]);
+  }
+}
+
+add_action( 'full_width_slider', 'check_shortcodes_for_slider' );
 ?>
