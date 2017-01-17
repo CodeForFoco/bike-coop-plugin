@@ -37,9 +37,9 @@
     jQuery(document).ready(function($){
         $('.fcbc-slider').slick({
             infinite: true,
-            speed: 300,
+            speed: 500,
             autoplay: true,
-            autoplaySpeed: 3200,
+            autoplaySpeed: 3900,
             dots: true,
             nextArrow:  "<a class='fcbc-slider-nav right' href='javascript:void(0);'>"+
                           "<i class='fa fa-chevron-circle-right'></i>"+
