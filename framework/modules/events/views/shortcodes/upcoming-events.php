@@ -34,7 +34,7 @@
                         if(empty(trim($url)))
                         $url = get_the_permalink();
                         ?>
-                        <a class="card card-inverse" href="<?php echo $url; ?>">
+                        <a class="card card-inverse" href="<?php echo $url; ?>" target="_blank">
                           <?php if( has_post_thumbnail() ): ?>
                           <?php
                             $src = get_the_post_thumbnail_url();
