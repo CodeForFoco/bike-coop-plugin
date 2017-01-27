@@ -8,6 +8,6 @@
 	</div>
 </div>
 <div class="row">
-    <button type="submit" class="download large button sites-button" >Sign Up</button>
+    <button type="submit" class="download large button sites-button pull-right" >Sign Up</button>
 </div>
 </form>
