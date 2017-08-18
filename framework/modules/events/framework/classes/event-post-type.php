@@ -56,30 +56,30 @@ if ( ! class_exists( 'Awesome_Events_Post_Type' ) ) :
 
 			$prefix = 'awesome_events_details_';
 
-			$cmb_details = new_cmb2_box( array(
+			$cmb_details = new_cmb2_box( [
 				'id'            => $prefix . 'metabox',
 				'title'         => __( 'Event Details', 'awesome_events' ),
 				'object_types'  => array( 'event', ), // Post type
 				'priority'   => 'core',
 				'show_names' => true, // Show field names on the left
 				'closed'     => false, // true to keep the metabox closed by default
-			) );
+			] );
 			
-			$cmb_details->add_field( array(
+			$cmb_details->add_field( [
 			    'name' => 'Date/Time',
-			    'id'   => 'wiki_test_datetime_timestamp',
+			    'id'   => $prefix.'timestamp',
 			    'type' => 'text_datetime_timestamp',
-			) );
+			] );
 		
-			$cmb_details->add_field( array(
+			$cmb_details->add_field( [
 				'name'       	=> __( 'URL', 'awesome_events' ),
 				'desc'       	=> __( 'Specify a url if details about event is on different (ie: facebook)', 'awesome_events' ),
 				'id'         	=> $prefix . 'url',
 				'type'       	=> 'text_url',
-				'attributes' 	=> array(
+				'attributes' 	=> [
 					
-				),
-			) );
+				],
+			] );
 		}
 		
 		/**
@@ -144,7 +144,6 @@ if ( ! class_exists( 'Awesome_Events_Post_Type' ) ) :
 			}
 		}
 		
-		
 		/**
 		*	Add shop columns to post type
 		*/
@@ -167,7 +166,6 @@ if ( ! class_exists( 'Awesome_Events_Post_Type' ) ) :
 		    include_once(BIKE_COOP_MODULE_EVENTS_DIR.'/views/shortcodes/upcoming-events.php');
 		    $html = ob_get_contents();
 		    ob_end_clean();
-		    
 		    
 		    return $html;
 		}
@@ -198,9 +196,6 @@ if ( ! class_exists( 'Awesome_Events_Post_Type' ) ) :
 			$this->register_post_type();
 			
 			add_shortcode( 'fcbc_upcoming_events',  array(&$this, 'shortcode_upcoming_events' ) );
-			
-			/** Load front-end scripts and styles */
-			//add_action( 'wp_enqueue_scripts', array(&$this, 'load_styles_and_scripts'), 1 );
 			
 			if(!is_admin()) return;
 			
